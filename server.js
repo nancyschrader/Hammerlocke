@@ -5,7 +5,7 @@ require("dotenv").config();
 const app = express();
 const PORT = 3000;
 const session = require("express-session");
-
+const Coffee = []
 // Middleware
 // allows us to use put and delete methods
 app.use(methodOverride("_method"));
@@ -43,6 +43,17 @@ app.get("/", (req, res) => {
     currentUser: req.session.currentUser
   });
 });
+
+app.get("/views/locations", (req, res) => {
+  res.render("locations.ejs");
+});
+app.get("/views/coffee", (req, res) => {
+  res.render("coffee.ejs");
+});
+app.get("/views/menu", (req, res) => {
+    res.render("menu.ejs");
+
+  });
 
 const usersController = require("./controllers/users.js");
 app.use("/users", usersController);

@@ -14,7 +14,7 @@ router.post("/", (req, res) => {
       req.session.currentUser = foundUser;
       res.redirect("/");
     } else {
-      res.send("Wrong Password, Please Try Again!");
+      res.send('<a href="/sessions/new">Wrong Password, Please Try Again!</a>');
       
     }
   });
