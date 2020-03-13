@@ -1,10 +1,12 @@
 const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
 
 const coffeeSchema = new mongoose.Schema({
   brand: { type: String, required: true},
   name: { type: String, required: true },
-  Taste: { type: String, required: true },
-  inStock: Boolean
+  taste: { type: String, required: true },
+  inStock: { type: Boolean, required: true }
 });
 
 const Coffee = mongoose.model("Coffee", coffeeSchema);

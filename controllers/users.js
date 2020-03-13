@@ -7,15 +7,15 @@ router.get("/new", (req, res) => {
   res.render("users/new.ejs");
 });
 
-router.post("/", (req, res) => {
-  User.findOne({ username: req.body.username }, (err, foundUser) => {
-    if (bcrypt.compareSync(req.body.password, foundUser.password)) {
-      req.session.currentUser = foundUser;
-      res.redirect("/");
-    } else {
-      res.send("Wrong Password, Please Try Again!");
+router.post('/', (req, res) => {
+  req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
+  User.create(req.body, (err, createdUser) => {
+    if (err) {
+      console.log(err)
     }
-  });
-});
+    console.log(createdUser);
+    res.redirect('/')
+  })
+})
 
 module.exports = router;

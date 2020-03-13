@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Edit Our Coffee</h1>
+        <form action="/coffee/<%=coffee.id%>?_method=PUT" method="POST">
+    		Brand: <input type="text" name="brand" value="<%=coffee.brand%>"/><br/>
+            Name: <input type="text" name="name" value="<%=coffee.name%>"/><br/>
+            Taste: <input type="text" name="taste" value="<%=coffee.taste%>"/><br/>
+    		Is The Coffee In Stock:
+            <input type="checkbox" name="inStock"
+                <% if(coffee.inStock === true){ %>
+                    checked
+                <% } %>
+            />
+            <br/>
+            <input type="submit" name="" value="Submit Changes"/>
+        </form>
+    </body>
+</html>
