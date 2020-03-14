@@ -44,6 +44,6 @@ https://hammerlocke.herokuapp.com/
 
 ### Planning
 
-![planning1](images/planning1.jpeg)
-![planning1](images/planning2.jpeg)
+![planning1](/planning1.jpeg)
+![planning2](/planning2.jpeg)
 
