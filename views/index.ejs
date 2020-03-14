@@ -3,7 +3,37 @@
 
 <head>
   <meta charset="utf-8">
-  
+  <link href="https://fonts.googleapis.com/css?family=Dosis|Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    h1 {
+      font-family: 'Press Start 2P', cursive;
+      text-align: center;
+    }
+
+    li a {
+      font-family: 'Dosis', sans-serif;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    </style>
 </head>
 
 <body>
@@ -19,13 +49,13 @@
     Welcome to Hammerlocke Coffee Shop!</a>
   </main>
   <% } %>
-  <nav>
-    <a href="/locations">Locations</a>
-    <a href="/coffee">Coffee</a>
-    <a href="/menu">Cafe Menu</a>
+  <ul>
+    <li><a href="/locations">Locations</a></li>
+    <li><a href="/coffee">Coffee Selections</a></li>
+    <li><a href="/menu">Cafe Menu</a></li>
     <ul>
-      <li><a href="/sessions/new">Log In</a></li>
-      <li><a href="/users/new">Register</a></li>
+      <li style="float:right"><a href="/sessions/new">Log In</a></li>
+      <li style="float:right"><a href="/users/new">Register</a></li>
       <% if(currentUser) { %>
       <li>
         <form action="/sessions?_method=DELETE" method="POST">
@@ -34,7 +64,7 @@
       </li>
       <% } %>
     </ul>
-  </nav>
+  </ul>
 
 </body>
 

@@ -1,100 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafe Menu</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cafe Menu</title>
+        <link href="https://fonts.googleapis.com/css?family=Dosis|Press+Start+2P&display=swap" rel="stylesheet">
+        <style>
+                img {
+                        width: 50%;
+                        width: 60%;
+                        background-color: white;
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                }
+
+                div.container {
+                        text-align: center;
+                        padding: 10px 20px;
+                        display: inline-flexbox;
+                        flex-wrap: wrap;
+                }
+
+                h1 {
+                        text-align: center;
+                        font-family: 'Press Start 2P', cursive;
+                }
+
+                p {
+                        font-family: 'Dosis', sans-serif;
+                }
+
+                h1 {
+                        font-family: 'Press Start 2P', cursive;
+                }
+
+                li a {
+                        font-family: 'Dosis', sans-serif;
+                }
+
+                ul {
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+                        overflow: hidden;
+                        background-color: #333;
+                }
+
+                li {
+                        float: left;
+                }
+
+                li a {
+                        display: block;
+                        color: white;
+                        text-align: center;
+                        padding: 14px 16px;
+                        text-decoration: none;
+                }
+        </style>
+        <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/locations">Locations</a></li>
+                <li><a href="/menu">Menu</a></li>
+                <li style="float:right"><a class="active" href="/coffee">Coffee Selections</a></li>
+        </ul>
 </head>
+
 <body>
-    <h1>Cafe Menu</h1>
+        <h1>Cafe Menu</h1>
 
 
-    <div class="container">
-      
+        <div class="container">
+
                 <div class="img">
-                    <img src="./public/images/Pokemon/tail cookie-640x427-640x427.jpgp" alt="" title="">
-                    <p>Cold Coffee with Pikachu's Tail Cookie</p>
-                
-            </div>
-            <div class="img">
-                
-                <img src="public/images/Pokemon/Gengars.jpg" alt="" title="">
-                <p>Gengar's Hikari Smoothie</p>
-            
-        </div>
-        <div class="img">
-            
-                <img src="public/images/Pokemon/Mius.jpg" alt="" title="">
-                
-                <p>Miu's Fluffy Masrshmellow Drink</p>
-            
-        </div>
-        <div class="img">
-            
-                <img src="public/images/Pokemon/eeveeSweets.jpg" alt="" title="">
-                
-                <p">Eevees Sweet Chocolate Parfait</p>
-            
-        </div>
-        <div class="img">
-            
-                <img src="public/images/Pokemon/snorlax.jpg" alt="" title="">
-                
-                <p>Snorlex Nap Lunch Plate</p>
-            
-        </div>
-        <div class="img">
-            
-                <img src="public/images/Pokemon/Eevee.jpg" alt="" title="">
-                
-                <p>Eevee's Well Plate</p>
-            
-        </div>
-        <div class="img">
-            
-                <img src="public/images/Pokemon/pikachu-meal-plate-030218.jpg" alt="" title="">
-                <p>Pikachu's Bulky Plate</p>
-            
-        </div>
-        <div class="img">
-            
-                <img src="public/images/Pokemon/latte.jpg" alt="" title="">
-                <p>Selectable Pokemon Lattes</p>
-            
-        </div>
-        <div class="img">
-            
-                <img src="public/images/Pokemon/Morpeco.jpg" alt="" title="">
-                
-                <p>Morpeco Pokopiko Omu Rice</p>
-            
-        </div>
-        <div class="img">
-            
-                <img src="public/images/Pokemon/Matadogas.jpg" alt="" title="">
-               
-                <p>Matagoas Pancake Plate</p>
-            
-        </div>
-        <div class="img">
-                <img src="public/images/Pokemon/Messon.jpg" alt="" title="">
-                
-                <p>Messon's Berry Berry Fruit Sandwich</p>
-            
-        </div>
-        <div class="img">
-            
-                <img src="public/images/Pokemon/Hivani.jpg" alt="" title="">
-                
-                <p>Hivani's Energy Tomoto Meatball Plate</p>
-            
-        </div>
-        <div class="img">
-           
-                <img src="/public/images/Pokemon/Sarnori.jpg" alt="" title="">
-                
-                <p>Sarnnori Creamy Cream Pie Stew</p>
-        </div>
+                        <img src="images/Pokemon/tailCookie.jpg" />
+                        <p>Cold Coffee with Pikachu's Tail Cookie</p>
+
+                </div>
+                <div class="img">
+
+                        <img src="images/Pokemon/Gengars.jpg" alt="" title="">
+                        <p>Gengar's Hikari Smoothie</p>
+
+                </div>
+                <div class="img">
+
+                        <img src="images/Pokemon/Mius.jpg" alt="" title="">
+
+                        <p>Miu's Fluffy Masrshmellow Drink</p>
+
+                </div>
+                <div class="img">
+
+                        <img src="images/Pokemon/eeveeSweets.jpg" alt="" title="">
+
+                        <p>Eevees Sweet Chocolate Parfait</p>
+
+                </div>
+                <div class="img">
+
+                        <img src="images/Pokemon/snorlax.jpg" alt="" title="">
+
+                        <p>Snorlex Nap Lunch Plate</p>
+
+                </div>
+                <div class="img">
+
+                        <img src="images/Pokemon/Eevee.jpg" alt="" title="">
+
+                        <p>Eevee's Well Plate</p>
+
+                </div>
+                <div class="img">
+
+                        <img src="images/Pokemon/pikachu-meal-plate-030218.jpg" alt="" title="">
+                        <p>Pikachu's Bulky Plate</p>
+
+                </div>
+                <div class="img">
+
+                        <img src="images/Pokemon/latte.jpg" alt="" title="">
+                        <p>Selectable Pokemon Lattes</p>
+
+                </div>
+                <div class="img">
+
+                        <img src="images/Pokemon/Morpeco.jpg" alt="" title="">
+
+                        <p>Morpeco Pokopiko Omu Rice</p>
+
+                </div>
+                <div class="img">
+
+                        <img src="images/Pokemon/Matadogas.jpg" alt="" title="">
+
+                        <p>Matagoas Pancake Plate</p>
+
+                </div>
+                <div class="img">
+                        <img src="images/Pokemon/Messon.jpg" alt="" title="">
+
+                        <p>Messon's Berry Berry Fruit Sandwich</p>
+
+                </div>
+                <div class="img">
+
+                        <img src="images/Pokemon/Hivani.jpg" alt="" title="">
+
+                        <p>Hivani's Energy Tomoto Meatball Plate</p>
+
+                </div>
+                <div class="img">
+
+                        <img src="images/Pokemon/Sarnori.jpg" alt="" title="">
+
+                        <p>Sarnnori Creamy Cream Pie Stew</p>
+                </div>
         </div>
 </body>
+
 </html>

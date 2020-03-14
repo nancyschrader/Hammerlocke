@@ -1,30 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Inventory</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Inventory</title>
+  <link href="https://fonts.googleapis.com/css?family=Dosis|Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    h1 {
+      font-family: 'Press Start 2P', cursive;
+      text-align: center;
+    }
+    a  {
+      font-family: 'Dosis', sans-serif;
+    }
+    li a {
+      font-family: 'Dosis', sans-serif;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    /* Change the link color to #111 (black) on hover */
+    li a:hover {
+      background-color: #111;
+    }
+    .coffee {
+      border: 5px dotted yellowgreen;
+    }
+    .singleCoffee {
+      border: 5px dotted blue;
+    }
+  </style>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/locations">Locations</a></li>
+    <li><a href="/menu">Menu</a></li>
+    <li style="float:right"><a class="active" href="/coffee">Coffee Selections</a></li>
+  </ul>
 </head>
+
 <body>
-    <h1> Coffee that we have avaliable to buy</h1>
-    <ul>
-        <% for(let i = 0; i < coffee.length; i++){ %>
-        <li>
-          
-          Brand: <%=coffee[i].brand; %></a> <br/>
-          Name: <%=coffee[i].name; %> <br/>
-          Taste: <%=coffee[i].taste;%> </br>
-          <% if(coffee[i].inStock === true){ %> The coffee is in Stock <% } else { %> The coffee is NOT in stock <% } %> 
-          <br/>
-          <form action="/coffee/<%=coffee[i].id; %>?_method=DELETE" method="POST">
-              <input type="submit" value="DELETE" />
-            </form>
-            <a href="/coffee/<%=coffee[i].id; %>/edit">Edit</a>
-        </li>
-        <% } %>
-       
-      </ul>
-<a href="/coffee/new">Add a New Entry</a>
+  <h1> Coffee that we have avaliable to buy</h1>
+  <div class="coffee">
+    <div class="singleCoffee">
+    <% for(let i = 0; i < coffee.length; i++){ %>
+
+
+    Brand: <%=coffee[i].brand; %></a> <br />
+    Name: <%=coffee[i].name; %> <br />
+    Taste: <%=coffee[i].taste;%> </br>
+    <% if(coffee[i].inStock === true){ %> The coffee is in Stock <% } else { %> The coffee is NOT in stock <% } %>
+    <br />
+    <form action="/coffee/<%=coffee[i].id; %>?_method=DELETE" method="POST">
+      <input type="submit" value="DELETE" />
+    </form>
+    <a href="/coffee/<%=coffee[i].id; %>/edit">Edit</a><br />
+
+    <% } %>
+
+    </div>
+  </div>
+  <a href="/coffee/new">Add a New Entry</a>
 
 </body>
+
 </html>
